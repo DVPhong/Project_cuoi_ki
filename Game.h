@@ -10,7 +10,7 @@
 #include"Ball.h"
 #include"Paddle.h"
 #include"Board.h"
-
+#include"Button.h"
 class Game {
     public :
         Game();
@@ -24,6 +24,7 @@ class Game {
         Ball* ball;
         Paddle* paddle;
         Board* board;
+        Button* button;
 
         bool isOriginalLocation;
         void newGame();
@@ -37,7 +38,7 @@ class Game {
         int countBricks();
 
         int score = 0, level = 1;
-        int ballRemain = 3; 
+        int ballRemain = 2; 
 
         void Audio();
         Mix_Chunk *brickHit = NULL;
@@ -49,7 +50,6 @@ class Game {
         TTF_Font* font = NULL;
         std::string text ;
         void loadFont(std::string text);
-        
     private :
         SDL_Window* window;
         SDL_Renderer* renderer;
