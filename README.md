@@ -1,4 +1,4 @@
-# Project_cuoi_ki 
+# Project cuối kì 
 # Giới thiệu
   - Bài tập lớn - Breakout Game - INT2215 1 Lập trình nâng cao 
   - MSV 21020375 Đoàn Văn Phong k66CC
