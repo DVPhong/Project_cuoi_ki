@@ -110,50 +110,57 @@ void Game::Run()
     ball = new Ball(renderer);
     paddle = new Paddle(renderer);
     board = new Board(renderer);
-    
+    button = new Button(renderer);
     newGame();
     Audio();
-    bool quit = false;
-   
-    while (!quit)
+    int quit = 1;
+    bool quitAll = false;
+
+    while (!quitAll) {
+    while (quit == 1)
     {
         SDL_Event e;
         while(SDL_PollEvent(&e) != 0)
         {
-            if (e.type == SDL_QUIT) quit = true;
+            if (e.type == SDL_QUIT) {quit = 0;quitAll = true;}
             paddle->HandleEvent(e);
         }
         paddle->movePaddle();
 
         checkWindowColision();
-        if (ballRemain < 1) quit = true; 
+        if (ballRemain < 1) quit = 0; 
         checkPaddleCollision();
-    
         checkBrickCollision();
         text = "Score : "+ std::to_string(score) + "  " + "Level : "+std::to_string(level) + " Ball : x" + std::to_string(ballRemain);
         loadFont(text);
         Update();
         Render();
     }
-    quit = false;
+    quit = 2;
     SDL_Surface* surface1 = IMG_Load("media/GameOver1.jpg");
     SDL_Texture* texture1 = SDL_CreateTextureFromSurface(renderer, surface1);
     SDL_FreeSurface(surface1);
     SDL_RenderPresent(renderer);
-    while(!quit)
+    
+    while(quit == 2)
     {
+        SDL_RenderCopy(renderer, texture1, NULL,NULL);
+        //SDL_RenderClear(renderer);
+        button->Render();
+        SDL_RenderPresent(renderer);
         SDL_Event e;
         while(SDL_PollEvent(&e) != 0)
         {
-            if (e.type == SDL_QUIT) quit = true;
+            if (e.type == SDL_QUIT) {quit = 0;quitAll = true;}
+            if (button->handleEvent(&e)) {quit = 1;ballRemain = 2;score = 0;level = 1;newGame();Audio();}
         }
-        SDL_RenderCopy(renderer, texture1, NULL,NULL);
-        SDL_RenderPresent(renderer);
+        
     }
-
+    }
     delete ball;
     delete paddle;
     delete board;
+    delete button;
     Clean();
     
     SDL_Quit();
@@ -200,7 +207,6 @@ void Game::Clean()
     SDL_DestroyTexture(texture);
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
-
 }
 
 void Game::Render()
