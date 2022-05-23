@@ -3,8 +3,8 @@
   - Bài tập lớn - Breakout Game - INT2215 1 Lập trình nâng cao 
   - MSV 21020375 Đoàn Văn Phong k66CC
 # Hướng dẫn cài đặt
-  - Điều kiện: Có C++ compiler và đã tải các thư viện SDL2, SDL2_image, SDL2_ttf, SDL2_mixer
-  - Tải source code 
+  - Điều kiện: Có C++ compiler và đã tải các thư viện SDL2, SDL2_image, SDL2_ttf, SDL2_mixer (dùng vscode)
+  - Tải source code https://github.com/DVPhong/Project_cuoi_ki.git
   - gõ mingw32-make để biên dịch chương trình
   - gõ .\main.exe để chạy chương trình
   - Nếu gặp khó khăn trong quá trình cài đặt, liên hệ qua email 21020375@vnu.edu.vn
