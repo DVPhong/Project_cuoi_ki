@@ -13,6 +13,7 @@
   - Mỗi màu của gạch tương ứng với số điểm 1->4
   - click chuột trái đẻ bắt đầu trò chơi
   - Nút LEFT( <- ) và RIGHT( -> ) để di chuyển paddle
+  - Link video : https://youtu.be/GUYUFZ2icco
 # Kiển thức thu được
   - Thư viện SDL2.0.
   - Tìm hiểu lập trình hướng đối tượng
