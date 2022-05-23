@@ -23,6 +23,7 @@
 # Tham khảo
   - Học kiển thức SDL2 trên [Lazyfoo](http://lazyfoo.net/tutorials/SDL/index.php#Hello%20SDL)
   - Học code trên [Rembound](https://rembound.com/articles/the-breakout-tutorial-with-cpp-and-sdl-2) và tự code lại, cải tiến 
+  - các kênh Youtube hướng dẫn code game : cs50, AlleyB...
 # Kết luận
   - **Việc chia các object ngay từ giai đoạn lên ý tưởng giúp cho việc quản lí ,sửa chữa, nâng cấp trở nên dễ dàng, đọc code rõ ràng rành mạch**
   - **CleanCode là cực kì cần thiết**
