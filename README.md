@@ -14,6 +14,8 @@
   - click chuột trái đẻ bắt đầu trò chơi
   - Nút LEFT( <- ) và RIGHT( -> ) để di chuyển paddle
   - Link video : https://youtu.be/GUYUFZ2icco
+  - ![image](https://user-images.githubusercontent.com/100186015/169800796-3bd3d75c-fbb0-4903-a1fa-b8c3f74536fc.png)
+
 # Kiển thức thu được
   - Thư viện SDL2.0.
   - Tìm hiểu lập trình hướng đối tượng
