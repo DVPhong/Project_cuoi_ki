@@ -26,6 +26,7 @@
 # Kết luận
   - **Việc chia các object ngay từ giai đoạn lên ý tưởng giúp cho việc quản lí ,sửa chữa, nâng cấp trở nên dễ dàng, đọc code rõ ràng rành mạch**
   - **CleanCode là cực kì cần thiết**
+  - Qua việc phát triển game, em cải thiện được kĩ năng code, cleancode.
 # Hướng phát triển game 
   - Tạo menu cho game, cải thiện đồ hoạ
   - Cải tiến thuật toán va chạm
